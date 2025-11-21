@@ -8,13 +8,18 @@ export const initialState = {
     userInfo:{name:'', email:''}
 }
 
-const SubscriptionContextProvider = ({children}) =>{
-    
+export const SubscriptionContextProvider = ({children}) =>{
+
 const [formData, setFormData] = useState(initialState);
+
+return (
+    <SubscriptionContext.Provider value={{formData, setFormData}}>
+        {children}
+    </SubscriptionContext.Provider>
+)
 
 
 }
-export default SubscriptionContextProvider;
 
 const SubscriptionContext = React.createContext()
 
