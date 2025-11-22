@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Step1 = () => {
+const Step3 = () => {
   return (
     <div>
-      Step1
+      step3
     </div>
   )
 }
 
-export default Step1
+export default Step3
